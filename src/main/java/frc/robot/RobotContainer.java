@@ -42,13 +42,12 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-
-  //
     // An ExampleCommand will run in autonomous
     return null;
   }
 
   public void periodic(){
     shooter.periodic();
+    //
   }
 }
