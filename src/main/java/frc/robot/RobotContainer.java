@@ -7,6 +7,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.Hood;
 import frc.robot.subsystems.Shooter;
 
 /**
@@ -18,11 +19,13 @@ import frc.robot.subsystems.Shooter;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   Shooter shooter;
+  Hood hood;
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
     shooter = new Shooter();
+    hood = new Hood();
     configureButtonBindings();
   }
 
@@ -48,6 +51,6 @@ public class RobotContainer {
 
   public void periodic(){
     shooter.periodic();
-    //
+    hood.periodic();
   }
 }
